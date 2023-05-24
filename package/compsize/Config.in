@@ -1,0 +1,9 @@
+config BR2_PACKAGE_COMPSIZE
+	bool "compsize"
+	depends on BR2_USE_MMU # util-linux
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	select BR2_PACKAGE_BTRFS_PROGS
+	help
+	  Calculate compression ratio of a set of files on Btrfs
+
+	  https://github.com/kilobyte/compsize
